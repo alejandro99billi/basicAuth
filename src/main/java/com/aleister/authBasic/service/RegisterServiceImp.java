@@ -1,0 +1,28 @@
+package com.aleister.authBasic.service;
+
+import com.aleister.authBasic.dto.model.response.PersonResponse;
+import com.aleister.authBasic.repository.RegisterRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+
+/**
+ * @author Alejandro Salvatierra
+ */
+
+
+public class RegisterServiceImp implements RegisterService {
+
+    @Autowired
+    private RegisterRepository repository;
+
+    @Override
+    public Iterable<PersonResponse> findPersons() {
+        return repository.findAll();
+    }
+
+    @Override
+    public PersonResponse savePerson(PersonResponse response) {
+        return repository.save(response);
+    }
+
+
+}
