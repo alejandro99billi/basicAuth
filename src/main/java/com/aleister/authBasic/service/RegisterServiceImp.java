@@ -3,12 +3,13 @@ package com.aleister.authBasic.service;
 import com.aleister.authBasic.dto.model.response.PersonResponse;
 import com.aleister.authBasic.repository.RegisterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * @author Alejandro Salvatierra
  */
 
-
+@Service
 public class RegisterServiceImp implements RegisterService {
 
     @Autowired
