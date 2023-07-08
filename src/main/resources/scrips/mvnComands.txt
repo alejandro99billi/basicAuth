@@ -1,0 +1,3 @@
+If work in windows can use the terminal of Ubuntu from the microsoft store and i'll use this comands
+to run the profile we use mvn spring-boot:run -Dspring-boot.run.profiles=dev,swagger
+for buil the maven proyect use mvn clean package -DskipTest
