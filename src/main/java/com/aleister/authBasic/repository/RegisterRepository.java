@@ -1,25 +1,25 @@
 package com.aleister.authBasic.repository;
 
-import com.aleister.authBasic.dto.model.response.PersonResponse;
+import com.aleister.authBasic.dto.model.response.RegisterResponse;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 @Repository
-public class RegisterRepository implements CrudRepository<PersonResponse, Long> {
+public class RegisterRepository implements CrudRepository<RegisterResponse, Long> {
     @Override
-    public <S extends PersonResponse> S save(S entity) {
+    public <S extends RegisterResponse> S save(S entity) {
         return null;
     }
 
     @Override
-    public <S extends PersonResponse> Iterable<S> saveAll(Iterable<S> entities) {
+    public <S extends RegisterResponse> Iterable<S> saveAll(Iterable<S> entities) {
         return null;
     }
 
     @Override
-    public Optional<PersonResponse> findById(Long aLong) {
+    public Optional<RegisterResponse> findById(Long aLong) {
         return Optional.empty();
     }
 
@@ -29,12 +29,12 @@ public class RegisterRepository implements CrudRepository<PersonResponse, Long> 
     }
 
     @Override
-    public Iterable<PersonResponse> findAll() {
+    public Iterable<RegisterResponse> findAll() {
         return null;
     }
 
     @Override
-    public Iterable<PersonResponse> findAllById(Iterable<Long> longs) {
+    public Iterable<RegisterResponse> findAllById(Iterable<Long> longs) {
         return null;
     }
 
@@ -49,7 +49,7 @@ public class RegisterRepository implements CrudRepository<PersonResponse, Long> 
     }
 
     @Override
-    public void delete(PersonResponse entity) {
+    public void delete(RegisterResponse entity) {
 
     }
 
@@ -59,7 +59,7 @@ public class RegisterRepository implements CrudRepository<PersonResponse, Long> 
     }
 
     @Override
-    public void deleteAll(Iterable<? extends PersonResponse> entities) {
+    public void deleteAll(Iterable<? extends RegisterResponse> entities) {
 
     }
 

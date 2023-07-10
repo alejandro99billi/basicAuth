@@ -1,8 +1,8 @@
 package com.aleister.authBasic.service;
 
-import com.aleister.authBasic.dto.model.response.PersonResponse;
+import com.aleister.authBasic.dto.model.response.RegisterResponse;
 
 public interface RegisterService {
-    Iterable<PersonResponse> findPersons() ;
-    PersonResponse savePerson(PersonResponse response);
+    Iterable<RegisterResponse> findPersons() ;
+    RegisterResponse savePerson(RegisterResponse response);
 }
