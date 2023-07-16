@@ -6,7 +6,6 @@ import com.aleister.authBasic.service.RegisterPersonService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,13 +18,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/persons")
-public class PersonController {
+public class RegistryPersonController {
     @Autowired
     RegisterPersonService service;
-    private static final Logger logger = LoggerFactory.getLogger(PersonController.class);
+    private static final Logger logger = LoggerFactory.getLogger(RegistryPersonController.class);
 
     @GetMapping("/all")
-    @Operation(summary = "Fin all users", tags = {"find-all"},
+    @Operation(summary = "Fin all users", tags = {"findAll"},
             responses = {@ApiResponse(responseCode = "400", description = "Context error", content = @Content(mediaType = "application/json"))})
     public ResponseEntity<List<PersonEntity>> getPersons() {
         List<PersonEntity> list = service.getAllPersons();
@@ -34,7 +33,7 @@ public class PersonController {
     }
 
     @GetMapping("/getById/{id}")
-    @Operation(summary = "Find a user for id", tags = {"find"},
+    @Operation(summary = "Find a user for id", tags = {"findById"},
             responses = {@ApiResponse(responseCode = "400", description = "Context error", content = @Content(mediaType = "application/json"))})
     public ResponseEntity<PersonEntity> getPersonById(@PathVariable("id") Long id) throws RecordNotFoundException {
         PersonEntity entity = service.getPersonById(id);
@@ -43,7 +42,7 @@ public class PersonController {
     }
 
     @PostMapping("/create")
-    @Operation(summary = "Create or Update a user", tags = {"create"},
+    @Operation(summary = "Create or Update a user", tags = {"createOrUpdateUser"},
             responses = {@ApiResponse(responseCode = "400", description = "Context error", content = @Content(mediaType = "application/json"))})
     public ResponseEntity<PersonEntity> createOrUpdatePerson(@RequestBody PersonEntity entity) {
         PersonEntity update = service.createOrUpdate(entity);
@@ -52,7 +51,7 @@ public class PersonController {
     }
 
     @DeleteMapping("/delete/{id}")
-    @Operation(summary = "Delete the user with id", tags = {"delete"},
+    @Operation(summary = "Delete the user with id", tags = {"deletebById"},
             responses = {@ApiResponse(responseCode = "400", description = "Context error", content = @Content(mediaType = "application/json"))})
     public HttpStatus deletePersonsById(@PathVariable("id") Long id)
             throws RecordNotFoundException {

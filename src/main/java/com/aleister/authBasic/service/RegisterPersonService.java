@@ -35,7 +35,6 @@ public class RegisterPersonService {
 
     public PersonEntity createOrUpdate(PersonEntity entity) {
         if (entity.getId() == null) {
-            // Crear una nueva persona sin ID
             entity = personRepository.save(entity);
             return entity;
         } else {

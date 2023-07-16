@@ -1,0 +1,7 @@
+CREATE TABLE "Persons".persons (
+	id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+	username varchar NULL,
+	"password" varchar NULL,
+	"name" varchar NULL,
+	lastname varchar NULL
+);
