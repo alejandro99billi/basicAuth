@@ -8,8 +8,6 @@ import lombok.Data;
 @Entity
 @Table(name = "roles")
 public class RoleEntity {
-    public class Role {
-
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +18,7 @@ public class RoleEntity {
         @Column(length = 20)
         private ERole name;
 
-    }
+
 
 
 }

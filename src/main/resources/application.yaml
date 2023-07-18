@@ -1,9 +1,15 @@
+# App Properties
+aliester:
+  app:
+    jwtSecret: aliester
+    jwtExpirationMs: 86400000
+
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres?currentSchema=test
     username: postgres
     password: root
     driver-class-name: org.postgresql.Driver
+
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-
